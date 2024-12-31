@@ -5,7 +5,14 @@ const userInput = document.getElementById("user-input");
 // Create a message bubble
 function createMessageBubble(content, sender = "user") {
   const wrapper = document.createElement("div");
-  wrapper.classList.add("mb-6", "flex", "items-start", "space-x-3");
+  // wrapper.classList.add("mb-6", "flex", "items-start", "space-x-3");
+  wrapper.classList.add("mb-6", "flex", "items-start");
+
+  if (sender === "assistant") {
+    wrapper.classList.add("flex-row")
+  } else {
+    wrapper.classList.add("flex-row-reverse")
+  }
 
   // Avatar
   const avatar = document.createElement("div");

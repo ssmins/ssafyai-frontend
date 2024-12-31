@@ -13,5 +13,11 @@
 .chat-scroll {
   scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
 }
+.flex-row {
+  justify-content: flex-start;
+}
+.flex-row-reverse {
+  justify-content: flex-end;
+}
 
 /* Additional custom styles if needed */
