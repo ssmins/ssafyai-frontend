@@ -34,7 +34,17 @@ body {
   width: 100%; /* 기본 너비를 100%로 설정 */
 }
 
+/* 반응형 크기 설정 */
 .max-w-screen-lg {
-  max-width: 50%; /* 최대 너비를 50%로 제한 */
+  width: 100%; /* 기본적으로 화면을 꽉 채움 */
+  max-width: 50%; /* 화면이 충분히 클 때만 50%로 제한 */
   margin: 0 auto; /* 중앙 배치 */
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .max-w-screen-lg {
+    max-width: 100%; /* 작은 화면에서는 전체 화면 너비 사용 */
+    padding: 0 0.5rem; /* 좁은 화면에서 여백 줄임 */
+  }
 }
