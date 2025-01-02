@@ -8,34 +8,33 @@
     <link rel="stylesheet" href="./src/styles.css" />
 </head>
 
-<body class="h-screen flex flex-col bg-gray-100">
-    <div class="w-full max-w-screen-lg bg-white shadow-md flex flex-col">
-    <!-- Header -->
-    <header
-        class="p-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white flex items-center justify-between">
-        <h1 class="text-xl font-semibold">ChatGPT-like Interface</h1>
-        <span class="text-sm opacity-90">Powered by Parcel & Tailwind</span>
-    </header>
+<body class="h-screen flex justify-center bg-gray-100">
+    <!-- 전체를 감싸는 div -->
+    <div class="w-full max-w-screen-lg bg-white shadow-md flex flex-col h-full">
+        <!-- 고정된 헤더 -->
+        <header class="p-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white flex items-center justify-between">
+            <h1 class="text-xl font-semibold">ChatGPT-like Interface</h1>
+            <span class="text-sm opacity-90">Powered by Parcel & Tailwind</span>
+        </header>
 
-    <!-- Main chat area -->
-    <main id="chat-container" class="flex-1 overflow-y-auto p-4 chat-scroll">
-        <!-- Messages will go here -->
-    </main>
+        <!-- 채팅 내역 -->
+        <main id="chat-container" class="flex-1 overflow-y-auto p-4 chat-scroll">
+            <!-- Messages will go here -->
+        </main>
 
-    <!-- Input area -->
-    <footer class="border-t border-gray-300 bg-white p-4">
-        <form id="message-form" class="flex items-center space-x-2">
-            <input type="text" id="user-input"
-                class="flex-1 border border-gray-300 rounded-md p-2 outline-none focus:border-blue-500"
-                placeholder="Type your message..." required />
-            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
-                Send
-            </button>
-        </form>
-    </footer>
-
+        <!-- 고정된 풋터 -->
+        <footer class="border-t border-gray-300 bg-white p-4">
+            <form id="message-form" class="flex items-center space-x-2">
+                <input type="text" id="user-input"
+                    class="flex-1 border border-gray-300 rounded-md p-2 outline-none focus:border-blue-500"
+                    placeholder="Type your message..." required />
+                <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+                    Send
+                </button>
+            </form>
+        </footer>
+    </div>
     <script type="module" src="./src/app.js"></script>
-</div>
 </body>
 
 </html>

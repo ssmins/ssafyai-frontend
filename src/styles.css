@@ -12,39 +12,45 @@
 }
 .chat-scroll {
   scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
-  padding: 0 1rem;
-}
-.flex-row {
-  justify-content: flex-start;
-}
-.flex-row-reverse {
-  justify-content: flex-end;
 }
 
-/* 중앙 배치와 크기 조정 */
+/* 중앙 배치 및 화면 고정 */
 body {
   display: flex;
   justify-content: center; /* 가로 중앙 정렬 */
-  align-items: center;    /* 세로 중앙 정렬 */
-  min-height: 100vh;      /* 화면 높이만큼 채우기 */
+  align-items: flex-start; /* 상단부터 정렬 */
+  min-height: 100vh;
   margin: 0;
 }
 
 .w-full {
-  width: 100%; /* 기본 너비를 100%로 설정 */
+  width: 100%;
+}
+
+/* 고정된 레이아웃 */
+header,
+footer {
+  flex-shrink: 0; /* 헤더와 풋터 크기 고정 */
+}
+
+main {
+  flex: 1; /* 남은 공간을 모두 사용 */
+  overflow-y: auto; /* 스크롤 가능 */
 }
 
 /* 반응형 크기 설정 */
 .max-w-screen-lg {
-  width: 100%; /* 기본적으로 화면을 꽉 채움 */
-  max-width: 50%; /* 화면이 충분히 클 때만 50%로 제한 */
-  margin: 0 auto; /* 중앙 배치 */
-  padding: 0 1rem;
+  width: 100%;
+  max-width: 50%;
+  height: 100%; /* 전체 화면 높이 사용 */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (max-width: 768px) {
   .max-w-screen-lg {
-    max-width: 100%; /* 작은 화면에서는 전체 화면 너비 사용 */
-    padding: 0 0.5rem; /* 좁은 화면에서 여백 줄임 */
+    max-width: 100%;
+    padding: 0 0.5rem;
   }
 }
