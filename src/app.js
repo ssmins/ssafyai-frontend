@@ -21,13 +21,13 @@ function createMessageBubble(content, sender = "user") {
     "text-white"
   );
 
-  // if (sender === "assistant") {
-  //   avatar.classList.add("bg-gradient-to-br", "from-green-400", "to-green-600");
-  //   avatar.textContent = "A";
-  // } else {
-  //   avatar.classList.add("bg-gradient-to-br", "from-blue-500", "to-blue-700");
-  //   avatar.textContent = "U";
-  // }
+  if (sender === "assistant") {
+    avatar.classList.add("bg-gradient-to-br", "from-green-400", "to-green-600");
+    avatar.textContent = "A";
+  } else {
+    avatar.classList.add("bg-gradient-to-br", "from-blue-500", "to-blue-700");
+    avatar.textContent = "U";
+  }
 
   // Bubble
   const bubble = document.createElement("div");
@@ -41,11 +41,11 @@ function createMessageBubble(content, sender = "user") {
     "shadow-sm"
   );
 
-  // if (sender === "assistant") {
-  //   bubble.classList.add("bg-gray-200", "text-gray-900");
-  // } else {
-  //   bubble.classList.add("bg-blue-600", "text-white");
-  // }
+  if (sender === "assistant") {
+    bubble.classList.add("bg-gray-200", "text-gray-900");
+  } else {
+    bubble.classList.add("bg-blue-600", "text-white");
+  }
 
   bubble.textContent = content;
 
