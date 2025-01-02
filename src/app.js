@@ -28,13 +28,13 @@ function createMessageBubble(content, sender = "user") {
     "text-white"
   );
 
-  if (sender === "assistant") {
-    avatar.classList.add("bg-gradient-to-br", "from-green-400", "to-green-600");
-    avatar.textContent = "A";
-  } else {
-    avatar.classList.add("bg-gradient-to-br", "from-blue-500", "to-blue-700");
-    avatar.textContent = "U";
-  }
+  // if (sender === "assistant") {
+  //   avatar.classList.add("bg-gradient-to-br", "from-green-400", "to-green-600");
+  //   avatar.textContent = "A";
+  // } else {
+  //   avatar.classList.add("bg-gradient-to-br", "from-blue-500", "to-blue-700");
+  //   avatar.textContent = "U";
+  // }
 
   // Bubble
   const bubble = document.createElement("div");

@@ -22,3 +22,12 @@
 }
 
 /* Additional custom styles if needed */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.max-w-screen-lg {
+  max-width: 50%;
+}
