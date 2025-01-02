@@ -5,14 +5,7 @@ const userInput = document.getElementById("user-input");
 // Create a message bubble
 function createMessageBubble(content, sender = "user") {
   const wrapper = document.createElement("div");
-  // wrapper.classList.add("mb-6", "flex", "items-start", "space-x-3");
-  // wrapper.classList.add("mb-6", "flex", "items-start");
-
-  if (sender === "assistant") {
-    wrapper.classList.add("mb-6", "flex", "items-start", "justify-start") // 챗봇 메세지는 justify-start로 왼쪽 정렬 
-  } else {
-    wrapper.classList.add("mb-6", "flex", "items-start", "justify-end") // 유저 메시지는 justify-end로 오른쪽 정렬 
-  }
+  wrapper.classList.add("mb-6", "flex", "items-start", "space-x-3");
 
   // Avatar
   const avatar = document.createElement("div");
@@ -48,11 +41,11 @@ function createMessageBubble(content, sender = "user") {
     "shadow-sm"
   );
 
-  if (sender === "assistant") {
-    bubble.classList.add("bg-gray-200", "text-gray-900");
-  } else {
-    bubble.classList.add("bg-blue-600", "text-white");
-  }
+  // if (sender === "assistant") {
+  //   bubble.classList.add("bg-gray-200", "text-gray-900");
+  // } else {
+  //   bubble.classList.add("bg-blue-600", "text-white");
+  // }
 
   bubble.textContent = content;
 

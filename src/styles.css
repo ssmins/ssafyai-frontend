@@ -14,43 +14,4 @@
   scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
 }
 
-/* 중앙 배치 및 화면 고정 */
-body {
-  display: flex;
-  justify-content: center; /* 가로 중앙 정렬 */
-  align-items: flex-start; /* 상단부터 정렬 */
-  min-height: 100vh;
-  margin: 0;
-}
-
-.w-full {
-  width: 100%;
-}
-
-/* 고정된 레이아웃 */
-header,
-footer {
-  flex-shrink: 0; /* 헤더와 풋터 크기 고정 */
-}
-
-main {
-  flex: 1; /* 남은 공간을 모두 사용 */
-  overflow-y: auto; /* 스크롤 가능 */
-}
-
-/* 반응형 크기 설정 */
-.max-w-screen-lg {
-  width: 100%;
-  max-width: 50%;
-  height: 100%; /* 전체 화면 높이 사용 */
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-
-@media (max-width: 768px) {
-  .max-w-screen-lg {
-    max-width: 100%;
-    padding: 0 0.5rem;
-  }
-}
+/* Additional custom styles if needed */
