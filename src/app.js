@@ -2,8 +2,11 @@ const chatContainer = document.getElementById("chat-container");
 const messageForm = document.getElementById("message-form");
 const userInput = document.getElementById("user-input");
 
+const buttonArea = document.querySelector(".space-y-3")
 const buttonForm = document.querySelectorAll(".button-form");
 const buttonForm0 = document.querySelector(".button-form0");
+const hideButton = document.querySelector(".hide-button")
+hideButton.textContent = "질문목록 숨기기"
 
 // Create a message bubble
 function createMessageBubble(content, sender = "user") {
@@ -97,6 +100,8 @@ messageForm.addEventListener("submit", async (e) => {
 buttonForm.forEach((button) => {
   button.addEventListener("click", async (e) => {
     e.preventDefault()
+    buttonArea.classList.toggle("hidden")
+    hidestatus()
     const message = e.target.textContent.trim()
     if (!message) return
 
@@ -111,5 +116,20 @@ buttonForm.forEach((button) => {
 
 buttonForm0.addEventListener("click", async (e) => {
   e.preventDefault()
-  
+  buttonArea.classList.toggle("hidden")
+  hidestatus()
+})
+
+const hidestatus = () => {
+  if (hideButton.textContent === "질문목록 숨기기") {
+    hideButton.textContent = "질문목록 보기"
+  } else {
+    hideButton.textContent = "질문목록 숨기기"
+  } 
+}
+
+hideButton.addEventListener("click", async (ev) => {
+  ev.preventDefault()
+  hidestatus()
+  buttonArea.classList.toggle("hidden")
 })
